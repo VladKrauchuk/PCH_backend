@@ -5,6 +5,7 @@ export type Order = {
   price: number;
   select: string | null;
   radio: string | null;
+  addiction: string[] | null;
   sizes: string;
   count: number;
   totalPrice: number;
@@ -13,6 +14,5 @@ export type Order = {
 export class OrderMailDto {
   data: Array<Order>;
   email: string;
-  phone: string;
   fullName: string;
 }

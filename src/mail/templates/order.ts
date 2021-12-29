@@ -314,6 +314,13 @@ export const orderMail = (dto: OrderMailDto) => {
                                                        item.select !== null
                                                          ? `<h4>Выбор: <b>${item.select}</b></h4>`
                                                          : ''
+                                                     } 
+                                                     ${
+                                                       item.addiction !== null
+                                                         ? `<h4>Добавки: ${item.addiction.join(
+                                                             ', ',
+                                                           )}</h4>`
+                                                         : ''
                                                      }   
                                                     <hr>
                                                     <h4>Цена одного: ${
@@ -344,10 +351,6 @@ export const orderMail = (dto: OrderMailDto) => {
                                                                           dto.email
                                                                         }"
                                                                                 target="_blank">Написать</a> </td> 
-                                                                       <td> <a href="tel:${
-                                                                         dto.email
-                                                                       }"
-                                                                                target="_blank">Позвонить</a> </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
